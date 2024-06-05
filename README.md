@@ -17,5 +17,7 @@ The most straightforward solution I’ve devised is to continuously ping a speci
 ## Usage
 
 Only one argument is required: the target to ping.
+=========
 
-
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
+=========
