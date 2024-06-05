@@ -1,6 +1,12 @@
 #!/bin/bash
 
 ROUTER_IP="${1}"
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <router_ip>"
+    exit 1
+fi
+
 WAIT_TIME=60
 RETRIES=3 # x WAIT_TIME < max_ups_time
 
