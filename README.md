@@ -2,7 +2,7 @@
 
 Halt server on failed ping(s)
 
-![logo](./img/haltoping_logo.jpg)
+<img src="./img/haltoping_logo.jpg" width="300"/>
 
 ## Purpose
 
