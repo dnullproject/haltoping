@@ -3,7 +3,7 @@
 Halt server on failed ping(s)
 
 <p align="center">
-    <img src="./img/haltoping_logo.jpg" width="500"/>
+    <img src="./img/haltoping_logo.jpg" width="400"/>
 </p>
 
 ## Purpose
@@ -17,6 +17,13 @@ The most straightforward solution I’ve devised is to continuously ping a speci
 ## Usage
 
 Only one argument is required: the target to ping.
+
+## TODO
+
+- [ ] install as deb package
+- [ ] test systemd service
+- [ ] pre-commit
+- [ ] github templates
 
 ---
 

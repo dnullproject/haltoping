@@ -1,0 +1,12 @@
+[Unit]
+Description=Halt on ping failure to the router
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/haltoping <ROUTER_IP>
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
