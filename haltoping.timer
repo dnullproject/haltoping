@@ -1,0 +1,9 @@
+[Unit]
+Description=Halt on ping - shutdown if ping fails
+After=network.target
+
+[Timer]
+OnBootSec=2min
+
+[Install]
+WantedBy=timers.target
