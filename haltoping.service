@@ -1,5 +1,5 @@
 [Unit]
-Description=Halt on ping failure to the router
+Description=Halt on ping - shutdown if ping fails
 After=network.target
 
 [Service]
