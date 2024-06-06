@@ -36,7 +36,7 @@ sudo bash install.sh 192.168.1.1
 ```
 
 > [!NOTE]
-> You can re-run script with different target IP, it will reinstall script
+> You can re-run install.sh with different target IP, it will reinstall script
 
 This will copy script into `/usr/local/bin/haloping`, and start it with systemd unit `haltoping.service`.
 
