@@ -23,6 +23,6 @@ sed -i "s|ExecStart=.*|ExecStart=/usr/local/bin/haltoping ${ROUTER_IP}|g" "$SERV
 
 systemctl daemon-reload
 systemctl enable haltoping.service
-systemctl start haltoping.service
+systemctl restart haltoping.service
 
 echo "haltoping has been installed and started successfully."

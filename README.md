@@ -19,7 +19,35 @@ Ordinary shutdown is used (without any restart) - this is on purpose. Be aware -
 
 ## Usage
 
+### Manual/one-shot
+
 Only one argument is required: the target to ping.
+
+```sh
+./haltoping 192.168.1.1
+```
+
+### Daemon
+
+Install script as systemd service:
+
+```sh
+sudo bash install.sh 192.168.1.1
+```
+
+> [!NOTE]
+> You can re-run script with different target IP, it will reinstall script
+
+This will copy script into `/usr/local/bin/haloping`, and start it with systemd unit `haltoping.service`.
+
+
+```sh
+# check status with
+systemctl status haltoping
+
+# check logs
+sudo journalctl -u haltoping
+```
 
 ## TODO
 
