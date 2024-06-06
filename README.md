@@ -51,6 +51,7 @@ sudo journalctl -u haltoping
 
 ## TODO
 
+- [ ] prever situation when server cant recover at the boot (disable autostart?)
 - [ ] install as deb package
 - [ ] test systemd service
 - [ ] pre-commit
