@@ -1,14 +1,14 @@
 #!/bin/bash
 
 ROUTER_IP="${1}"
+WAIT_TIME=30
+RETRIES=3 # x WAIT_TIME < max_ups_time
 
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <router_ip>"
     exit 1
 fi
 
-WAIT_TIME=60
-RETRIES=3 # x WAIT_TIME < max_ups_time
 
 ping_router() {
     ping -c 1 "${ROUTER_IP}" > /dev/null 2>&1

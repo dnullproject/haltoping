@@ -8,7 +8,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 SOURCE_DIR="$(dirname "$(readlink -f "$0")")"
-SCRIPT_DEST="/usr/local/bin/haltoping.sh"
+SCRIPT_DEST="/usr/local/bin/haltoping"
 SERVICE_DEST="/etc/systemd/system/haltoping.service"
 
 if [[ $EUID -ne 0 ]]; then
@@ -16,10 +16,10 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-cp "$SOURCE_DIR/haltoping.sh" "$SCRIPT_DEST"
+cp "$SOURCE_DIR/haltoping" "$SCRIPT_DEST"
 chmod +x "$SCRIPT_DEST"
 cp "$SOURCE_DIR/haltoping.service" "$SERVICE_DEST"
-sed -i "s|<ROUTER_IP>|$ROUTER_IP|g" "$SERVICE_DEST"
+sed -i "s|ExecStart=.*|ExecStart=/usr/local/bin/haltoping ${ROUTER_IP}|g" "$SERVICE_DEST"
 
 systemctl daemon-reload
 systemctl enable haltoping.service
